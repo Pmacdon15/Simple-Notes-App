@@ -41,5 +41,14 @@ node index.js
 
 ```
 
-Your notes server is running.
+Your notes server is running. Now in your URL bar enter:
+
+
+``` url
+
+http://localhost:445/notes
+
+```
+
+If contacting remotely remember to turn on port forwarding and use your IP address as opposed to local host.
 
