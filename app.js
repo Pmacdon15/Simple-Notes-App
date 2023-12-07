@@ -18,13 +18,19 @@ app.use(express.urlencoded({ extended: true }));
 // Add Route for js
 app.use(express.static("client_side"));
 
+// app.use("/", (req, res) => {
+//   res.sendFile(path.join(__dirname, "../notes/client_side/notes.html"));
+// });
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../notes/client_side/notes.html"));
+});
+
 app.get("/notes", async (req, res) => {
   const notes = await getNotes();
 
-  if (req.accepts("html")) {
-    // Send HTML response
-    res.sendFile(path.join(__dirname, "/client_side/notes.html"));
-  } else if (req.accepts("json")) {
+ 
+  if (req.accepts("json")) {
     // Send JSON response
     res.json({ notes });
   } else {
