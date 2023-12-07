@@ -46,7 +46,7 @@ Your notes server is running. Now in your URL bar enter:
 
 ``` url
 
-http://localhost:445/notes
+http://localhost:445/
 
 ```
 
